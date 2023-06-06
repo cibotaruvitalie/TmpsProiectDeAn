@@ -1,0 +1,1576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/feather-icons"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+</head>
+<style>body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  visibility: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparant;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #3bb77e;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2f9063;
+}
+
+::-moz-selection {
+  color: #3bb77e;
+  background: #ffba43;
+}
+
+::selection {
+  color: #3bb77e;
+  background: #ffba43;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+}
+
+.flex {
+  display: flex;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.debug {
+  border: 2px solid red;
+}
+
+.landing {
+  padding-top: 1px;
+  height: 100vh;
+  background: linear-gradient(90.03deg, #eedab5 0.03%, #e6f8ef 99.32%, #e6f8ef 99.32%);
+}
+.landing .header {
+  z-index: 1;
+  height: 50px;
+  margin-top: 30px;
+  margin-left: 3.5%;
+  margin-right: 3.5%;
+  align-items: center;
+  overflow: hidden;
+}
+.landing .header .header-content {
+  z-index: 100;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+.landing .header .header-content .left {
+  align-items: center;
+}
+.landing .header .header-content .left .title {
+  font-weight: bold;
+  margin-right: 20px;
+  font-size: 32px;
+  width: 200px;
+}
+.landing .header .header-content .left .title .hidden-icon {
+  margin-left: -42px;
+  opacity: 0;
+  transition: all 0.24s ease-in-out;
+}
+.landing .header .header-content .left .title:hover .hidden-icon {
+  opacity: 1;
+  margin-left: 0px;
+}
+.landing .header .header-content .left .nav .nav-item {
+  margin-right: 30px;
+  font-size: 20px;
+  font-weight: 600;
+}
+.landing .header .header-content .left .nav .nav-item.icon-cont {
+  align-items: center;
+}
+.landing .header .header-content .left .nav .nav-item.icon-cont svg {
+  width: 16px;
+  height: 16px;
+  margin-left: 4px;
+  margin-top: 2px;
+}
+.landing .header .header-content .right {
+  z-index: 10;
+  align-items: center;
+}
+.landing .header .header-content .right .button-box {
+  padding: 8px 16px;
+  border: 2px solid black;
+  align-items: center;
+  background: transparent;
+  transition: background 0.15s ease-in-out;
+}
+.landing .header .header-content .right .button-box:hover {
+  background: black;
+  color: white;
+}
+.landing .header .header-content .right .button-box:hover svg {
+  color: white;
+}
+.landing .header .header-content .right .button-box .button-content {
+  align-items: center;
+  font-weight: 600;
+}
+.landing .header .header-content .right .button-box.leave-gap {
+  margin-left: 15px;
+}
+.landing .header .header-content .right .button-box.with-text svg:first-child {
+  margin-right: 4px;
+}
+.landing .header .header-content .right .button-box.with-text svg:last-child {
+  margin-top: 4px;
+}
+.landing .header .header-content .right .button-box svg {
+  width: 20px;
+  height: 20px;
+  stroke-width: 2.5;
+}
+
+.landing {
+  overflow: hidden;
+}
+.landing .hero {
+  width: 100%;
+  height: calc(100% - 30px - 50px);
+}
+.landing .hero .side-text {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: absolute;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-size: 112px;
+  font-weight: 600;
+  color: transparent;
+  top: 175px;
+  -webkit-text-stroke: 1px rgba(59, 183, 126, 0.5);
+}
+.landing .hero .hero-content {
+  margin: 0 3.5%;
+  height: 100%;
+}
+.landing .hero .hero-content .left {
+  width: 55%;
+}
+.landing .hero .hero-content .left .content {
+  margin-top: 150px;
+  margin-left: 15%;
+}
+.landing .hero .hero-content .left .content .description {
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 72px;
+}
+.landing .hero .hero-content .left .content .description .hide-text-cont {
+  position: relative;
+  overflow: hidden;
+  height: 72px;
+}
+.landing .hero .hero-content .left .content .description .hide-text-cont .hide-text {
+  position: absolute;
+  opacity: 0;
+}
+.landing .hero .hero-content .left .content .description .highlight {
+  color: #3bb77e;
+}
+.landing .hero .hero-content .left .content .description .message {
+  font-size: 24px;
+  margin-top: 10px;
+  position: relative;
+  display: inline-block;
+}
+.landing .hero .hero-content .left .content .description .message:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  bottom: 12px;
+  border-radius: 10px;
+  background: black;
+}
+.landing .hero .hero-content .left .content .cta-button {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin-top: 60px;
+  width: 175px;
+  background: black;
+  height: 50px;
+  border-radius: 100px;
+}
+.landing .hero .hero-content .left .content .cta-button .button-content {
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+.landing .hero .hero-content .left .content .cta-button .button-content .hidden-icon {
+  opacity: 0;
+  margin-left: -23px;
+  width: 18px;
+  height: 22px;
+  transition: all 0.25s ease-in-out;
+}
+.landing .hero .hero-content .left .content .cta-button:hover .hidden-icon {
+  opacity: 1;
+  margin-left: 4px;
+}
+.landing .hero .hero-content .right {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 45%;
+}
+.landing .hero .hero-content .right .content {
+  width: 100%;
+  height: 100%;
+  margin-top: -96px;
+}
+.landing .hero .hero-content .right .content .hero-image {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  opacity: 0;
+}
+.landing .hero .hero-content .right .content .hero-image img {
+  z-index: 1;
+  align-self: center;
+  width: 60vh;
+}
+.landing .hero .hero-content .right .content .bg-blob-cont {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.landing .hero .hero-content .right .content .bg-blob-cont .bg-blob {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  z-index: 0;
+  margin: 20%;
+  margin-top: 32vh;
+  background: linear-gradient(91.06deg, #008000 0.91%, #ffd700 97.81%);
+  filter: blur(74px);
+}
+
+.floating-info {
+  width: 100%;
+  height: 140px;
+}
+.floating-info .floating-content {
+  margin: 0 3.5%;
+  padding: 0 2%;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background: white;
+  box-shadow: 0px 1px 30px rgba(36, 38, 43, 0.1);
+  border-radius: 5px;
+  height: 100%;
+  margin-top: -120px;
+  z-index: 2;
+  position: relative;
+}
+.floating-info .floating-content .floating-item {
+  gap: 10px;
+}
+.floating-info .floating-content .floating-item .left img {
+  width: 80px;
+  height: 80px;
+}
+.floating-info .floating-content .floating-item .right {
+  flex-direction: column;
+  justify-content: center;
+  font-size: 14px;
+}
+.floating-info .floating-content .floating-item .right .title {
+  color: #10b981;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.large-food-cards {
+  margin-top: 60px;
+  margin-bottom: 85px;
+  width: 100%;
+}
+.large-food-cards .food-cards-cont {
+  margin: 0 3.5%;
+  gap: 2%;
+  align-items: center;
+  justify-content: center;
+}
+.large-food-cards .food-cards-cont .food-card-item {
+  width: 380px;
+  height: 240px;
+  filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.25));
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  transition: background-size 0.3s ease-in-out;
+}
+.large-food-cards .food-cards-cont .food-card-item:hover {
+  background-size: 110%;
+}
+.large-food-cards .food-cards-cont .food-card-item .content {
+  margin: 50px 20px;
+}
+.large-food-cards .food-cards-cont .food-card-item .content .sub-title {
+  font-family: "Satisfy";
+  color: #3bb77e;
+  font-size: 16px;
+}
+.large-food-cards .food-cards-cont .food-card-item .content .title {
+  font-size: 24px;
+  letter-spacing: 0.56px;
+}
+.large-food-cards .food-cards-cont .food-card-item .content .cta-button {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 100px;
+  height: 30px;
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffba43;
+  border-radius: 6px;
+  color: white;
+  font-size: 10px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.big-title {
+  font-size: 48px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.add-ons .tab-switcher {
+  margin-bottom: 30px;
+  align-items: center;
+  justify-content: center;
+}
+.add-ons .tab-switcher .tabs-cont {
+  gap: 28px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  flex-wrap: wrap;
+}
+.add-ons .tab-switcher .tabs-cont .tab-item {
+  font-size: 18px;
+  width: 180px;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+}
+.add-ons .tab-switcher .tabs-cont .tab-item:not(.selected) {
+  cursor: pointer;
+}
+.add-ons .tab-switcher .tabs-cont .tab-item.selected {
+  background: #3bb77e;
+  border-radius: 5px;
+  box-shadow: -1.15px 10.94px 39.56px rgba(0, 0, 0, 0.15);
+  color: white;
+}
+
+.add-on-cards {
+  width: 100%;
+  margin-bottom: 50px;
+}
+.add-on-cards .add-on-cards-cont {
+  margin: 0 3.5%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.add-on-cards .add-on-cards-cont .add-on-card-item {
+  flex: 1 0 21%;
+  margin: 5px;
+  margin-top: 25px;
+  background: white;
+}
+.add-on-cards .add-on-cards-cont .add-on-card-item .content {
+  box-shadow: 0px 1px 30px rgba(36, 38, 43, 0.1);
+  border-radius: 5px;
+  justify-content: center;
+  width: 280px;
+  margin: 0 auto;
+  flex-direction: column;
+}
+.add-on-cards .add-on-cards-cont .add-on-card-item .content img {
+  margin: 10px auto;
+  width: 260px;
+  height: 260px;
+}
+.add-on-cards .add-on-cards-cont .add-on-card-item .content .sub-content {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.add-on-cards .add-on-cards-cont .add-on-card-item .content .sub-content .category {
+  font-size: 13px;
+}
+.add-on-cards .add-on-cards-cont .add-on-card-item .content .sub-content .name {
+  font-weight: 600;
+  font-size: 21px;
+  letter-spacing: 0.44px;
+  line-height: 25px;
+  margin-bottom: 4px;
+}
+.add-on-cards .add-on-cards-cont .add-on-card-item .content .sub-content .price-section {
+  justify-content: space-between;
+  align-items: center;
+}
+.add-on-cards .add-on-cards-cont .add-on-card-item .content .sub-content .price-section .price-cont {
+  gap: 5px;
+}
+.add-on-cards .add-on-cards-cont .add-on-card-item .content .sub-content .price-section .rating svg {
+  width: 16px;
+  height: 16px;
+  color: #ffba43;
+}
+.add-on-cards .add-on-cards-cont .add-on-card-item .content .sub-content .price {
+  color: #3bb77e;
+  font-size: 14px;
+  font-weight: bold;
+}
+.add-on-cards .add-on-cards-cont .add-on-card-item .content .sub-content .price.strike-out {
+  text-decoration: line-through;
+  color: black;
+  margin-right: 4px;
+}
+.add-on-cards .add-on-cards-cont .add-on-card-item .content .sub-content .button-group {
+  margin-top: 7px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.add-on-cards .add-on-cards-cont .add-on-card-item .content .sub-content .button-group .left .button-content {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: 14px;
+  font-weight: 600;
+  align-items: center;
+  justify-content: center;
+  background: #ffba43;
+  border-radius: 5px;
+  width: 150px;
+  height: 40px;
+  color: white;
+}
+.add-on-cards .add-on-cards-cont .add-on-card-item .content .sub-content .button-group .left .button-content svg {
+  margin-left: 3px;
+  width: 18px;
+  height: 18px;
+  stroke-width: 2.5;
+}
+.add-on-cards .add-on-cards-cont .add-on-card-item .content .sub-content .button-group .right {
+  gap: 4px;
+}
+.add-on-cards .add-on-cards-cont .add-on-card-item .content .sub-content .button-group .right .button-content {
+  background: #ffba43;
+  border-radius: 5px;
+  width: 40px;
+  height: 40px;
+  color: white;
+  align-items: center;
+  justify-content: center;
+}
+.add-on-cards .add-on-cards-cont .add-on-card-item .content .sub-content .button-group .right .button-content svg {
+  stroke-width: 2.5;
+  width: 20px;
+  height: 20px;
+}
+
+.banner {
+  background: url("https://i.imgur.com/2RwsNiU.png") no-repeat center/cover;
+  width: 100%;
+  height: 470px;
+  position: relative;
+  margin-bottom: 70px;
+  transition: background-size 0.3s ease-in-out;
+}
+.banner .layer {
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.banner .banner-content {
+  position: relative;
+  height: 100%;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 2;
+}
+.banner .banner-content .play-btn {
+  background: #ffba43;
+  width: 110px;
+  height: 110px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.banner .banner-content .play-btn svg {
+  margin-left: 7px;
+  height: 48px;
+  width: 48px;
+  fill: white;
+}
+
+.organic-products {
+  width: 100%;
+}
+.organic-products .organic-cards-cont {
+  margin: 0 3.5%;
+  height: 500px;
+  max-height: 500px;
+  flex-wrap: wrap;
+}
+.organic-products .organic-cards-cont .left {
+  width: 410px;
+  height: 100%;
+  position: relative;
+}
+.organic-products .organic-cards-cont .left .overlay {
+  height: 100%;
+  position: absolute;
+  background: white;
+}
+.organic-products .organic-cards-cont .left .content {
+  width: 396px;
+  height: 100%;
+  background: url("https://i.imgur.com/vq55p5r.png") no-repeat;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+.organic-products .organic-cards-cont .left .content .title {
+  margin-top: 70px;
+  margin-bottom: 40px;
+  font-size: 36px;
+  color: white;
+  text-align: center;
+  font-weight: 600;
+}
+.organic-products .organic-cards-cont .left .content .button {
+  background: #ffba43;
+  border-radius: 5px;
+  width: 120px;
+  height: 40px;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+}
+.organic-products .organic-cards-cont .right {
+  width: calc(100% - 410px);
+  overflow: auto;
+  overflow-x: hidden;
+  height: 100%;
+}
+.organic-products .organic-cards-cont .right .content {
+  width: 100%;
+  flex-wrap: wrap;
+}
+.organic-products .organic-cards-cont .right .content .mini-product-card-cont {
+  flex: 1 1 50%;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}
+.organic-products .organic-cards-cont .right .content .mini-product-card-cont .mini-product-card-item {
+  background: white;
+  box-shadow: 0px 1px 30px rgba(36, 38, 43, 0.1);
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  margin: 0 10px;
+  gap: 10px;
+}
+.organic-products .organic-cards-cont .right .content .mini-product-card-cont .mini-product-card-item .left-card {
+  justify-content: center;
+  align-items: center;
+  margin: 0 12px;
+}
+.organic-products .organic-cards-cont .right .content .mini-product-card-cont .mini-product-card-item .left-card img {
+  width: 120px;
+  height: 120px;
+}
+.organic-products .organic-cards-cont .right .content .mini-product-card-cont .mini-product-card-item .right-card {
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.organic-products .organic-cards-cont .right .content .mini-product-card-cont .mini-product-card-item .right-card .name {
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: 0.4px;
+}
+.organic-products .organic-cards-cont .right .content .mini-product-card-cont .mini-product-card-item .right-card .rating {
+  color: #ffba43;
+}
+.organic-products .organic-cards-cont .right .content .mini-product-card-cont .mini-product-card-item .right-card .rating svg {
+  width: 16px;
+  height: 16px;
+}
+.organic-products .organic-cards-cont .right .content .mini-product-card-cont .mini-product-card-item .right-card .price-cont {
+  gap: 4px;
+}
+.organic-products .organic-cards-cont .right .content .mini-product-card-cont .mini-product-card-item .right-card .price {
+  margin-top: 5px;
+  color: #3bb77e;
+  font-weight: bold;
+}
+.organic-products .organic-cards-cont .right .content .mini-product-card-cont .mini-product-card-item .right-card .price.strike-out {
+  color: black;
+  text-decoration: line-through;
+}
+
+.testimonials {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+.testimonials .test-cont {
+  background: #3bb77e;
+}
+.testimonials .test-cont .content {
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+}
+.testimonials .test-cont .content .big-title {
+  margin-top: 40px;
+  color: white;
+}
+.testimonials .test-cont .content .test-cards-cont {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.testimonials .test-cont .content .test-cards-cont .test-card-item .content {
+  position: relative;
+  width: 420px;
+  height: 210px;
+  background: white;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.testimonials .test-cont .content .test-cards-cont .test-card-item .content .test-quote-cont {
+  margin: 16px 20px;
+}
+.testimonials .test-cont .content .test-cards-cont .test-card-item .content .test-quote-cont .test {
+  width: 80%;
+  font-size: 16px;
+}
+.testimonials .test-cont .content .test-cards-cont .test-card-item .content .test-quote-cont .quote {
+  margin: 15px auto;
+  opacity: 0.5;
+}
+.testimonials .test-cont .content .test-cards-cont .test-card-item .content .user-info {
+  width: 100%;
+}
+.testimonials .test-cont .content .test-cards-cont .test-card-item .content .user-info .user-info-cont {
+  width: 100%;
+  margin: 16px 20px;
+  justify-content: space-between;
+  align-items: center;
+  background: #3bb77e;
+  height: 60px;
+  border-radius: 6px;
+}
+.testimonials .test-cont .content .test-cards-cont .test-card-item .content .user-info .user-info-cont .user-detail-cont {
+  margin-left: 16px;
+  color: white;
+}
+.testimonials .test-cont .content .test-cards-cont .test-card-item .content .user-info .user-info-cont .user-detail-cont .name {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 17px;
+}
+.testimonials .test-cont .content .test-cards-cont .test-card-item .content .user-info .user-info-cont .user-detail-cont .job {
+  font-size: 12px;
+  font-weight: 500;
+}
+.testimonials .test-cont .content .test-cards-cont .test-card-item .content .user-info .user-info-cont .profile-pic {
+  position: relative;
+}
+.testimonials .test-cont .content .test-cards-cont .test-card-item .content .user-info .user-info-cont .profile-pic img {
+  filter: drop-shadow(0px 1px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 8px;
+  border: 2px solid white;
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  top: -50px;
+  right: 15px;
+}
+.testimonials .test-cont .content .slider-cont {
+  margin: 50px 0;
+  gap: 10px;
+}
+.testimonials .test-cont .content .slider-cont .slider {
+  width: 120px;
+  height: 4px;
+  background: rgba(250, 250, 250, 0.5);
+  border-radius: 5px;
+}
+.testimonials .test-cont .content .slider-cont .slider.selected {
+  background: #fafafa;
+}
+
+.blog {
+  width: 100%;
+  margin-bottom: 90px;
+}
+.blog .blog-cards-cont {
+  margin: 0 3.5%;
+  justify-content: center;
+  margin-top: 60px;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.blog .blog-cards-cont .blog-card {
+  height: 500px;
+  width: 350px;
+  background: #ffffff;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 9px;
+}
+.blog .blog-cards-cont .blog-card .content .overlay {
+  background: white;
+  width: 350px;
+  position: absolute;
+  height: 250px;
+}
+.blog .blog-cards-cont .blog-card .content .blog-details-cont .date {
+  margin-left: 8px;
+  margin-top: 10px;
+  writing-mode: vertical-lr;
+  color: #3bb77e;
+  font-weight: 500;
+}
+.blog .blog-cards-cont .blog-card .content .blog-details-cont .blog-details {
+  margin-top: 10px;
+  margin-left: 12px;
+  flex-direction: column;
+}
+.blog .blog-cards-cont .blog-card .content .blog-details-cont .blog-details .details {
+  margin-bottom: 10px;
+  font-size: 12px;
+  flex-direction: row;
+}
+.blog .blog-cards-cont .blog-card .content .blog-details-cont .blog-details .details .author {
+  color: #3bb77e;
+  align-items: center;
+  font-weight: 500;
+}
+.blog .blog-cards-cont .blog-card .content .blog-details-cont .blog-details .details .author svg {
+  margin-right: 4px;
+  width: 16px;
+  height: 16px;
+}
+.blog .blog-cards-cont .blog-card .content .blog-details-cont .blog-details .details .category {
+  margin-left: 20px;
+  text-transform: uppercase;
+  background: #3bb77e;
+  border-radius: 4px;
+  height: 20px;
+  width: 110px;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+}
+.blog .blog-cards-cont .blog-card .content .blog-details-cont .blog-details .title {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 27px;
+  width: 90%;
+}
+.blog .blog-cards-cont .blog-card .content .blog-details-cont .blog-details .desc {
+  margin-top: 8px;
+  font-weight: 200;
+  font-size: 12px;
+  width: 90%;
+}
+.blog .blog-cards-cont .blog-card .content .blog-details-cont .read-more {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin-top: 20px;
+  color: #3bb77e;
+  font-size: 12px;
+  font-weight: 500;
+  align-items: center;
+}
+.blog .blog-cards-cont .blog-card .content .blog-details-cont .read-more svg {
+  margin-left: 4px;
+  width: 16px;
+  height: 16px;
+}
+
+.footer {
+  width: 100%;
+  background: #e2f9ee;
+}
+.footer .footer-cont {
+  margin: 0 3.5%;
+  height: 100%;
+  justify-content: center;
+}
+.footer .footer-cont .content {
+  height: 100%;
+  width: 100%;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-bottom: 90px;
+}
+.footer .footer-cont .content .about {
+  width: 300px;
+  margin-top: 80px;
+}
+.footer .footer-cont .content .about .title {
+  font-size: 36px;
+  font-weight: bold;
+}
+.footer .footer-cont .content .about .socials {
+  gap: 12px;
+  margin-top: 26px;
+}
+.footer .footer-cont .content .about .socials .social {
+  width: 45px;
+  height: 45px;
+  align-items: center;
+  justify-content: center;
+  background: #3bb77e;
+  border-radius: 5px;
+}
+.footer .footer-cont .content .about .socials .social.twit img {
+  width: 24px;
+  height: 20px;
+}
+.footer .footer-cont .content .about .socials .social img {
+  width: 20px;
+  height: 20px;
+}
+.footer .footer-cont .content .links {
+  width: 150px;
+  margin-top: 80px;
+  margin-left: 20px;
+}
+.footer .footer-cont .content .links .title {
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+.footer .footer-cont .content .links .link {
+  margin-bottom: 7px;
+}
+.footer .footer-cont .content .contact {
+  width: 240px;
+  margin-top: 80px;
+  margin-left: 20px;
+}
+.footer .footer-cont .content .contact .title {
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+.footer .footer-cont .content .contact .link {
+  margin-bottom: 12px;
+}
+.footer .footer-cont .content .contact .link a {
+  text-decoration: none;
+  color: black;
+}
+.footer .footer-cont .content .contact .link svg {
+  margin-top: 2px;
+  margin-right: 10px;
+  color: #ffba43;
+  width: 24px;
+  height: 24px;
+}</style>
+    
+<body>
+  <main>
+    <section class="landing">
+      <div class="header flex">
+        <div class="header-content flex">
+          <div class="left flex">
+            <div class="title pointer flex">Farmiest!
+              <div class="hidden-icon">👨‍🌾️</div>
+            </div>
+            <div class="nav flex">
+              <div class="nav-item selected pointer">Home</div>
+              <div class="nav-item flex icon-cont pointer">Store<i data-feather="chevron-down"></i></div>
+              <div class="nav-item pointer">Contact</div>
+              <div class="nav-item pointer">About</div>
+            </div>
+          </div>
+          <div class="right flex">
+            <div class="nav flex">
+              <div class="button-box leave-gap flex pointer" style="margin-right: -2px">
+                <div class="button-content flex"><i data-feather="map-pin"></i></div>
+              </div>
+              <div class="button-box flex pointer">
+                <div class="button-content flex"><i data-feather="search"></i></div>
+              </div>
+              <div class="button-box with-text leave-gap flex pointer">
+                <div class="button-content flex"><i data-feather="user"></i>
+                  <div>Account</div>
+                </div>
+              </div>
+              <div class="button-box bagt with-text leave-gap flex pointer">
+                <div class="button-content  flex"><i data-feather="shopping-bag"></i>
+                  <div>Bag</div>
+                </div>
+              </div>
+              <div class="button-box with-text leave-gap flex pointer">
+                <div class="button-content flex"><i data-feather="globe"></i>
+                  <div>EN</div><i data-feather="chevron-down"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero">
+        <div class="side-text">Organic</div>
+        <div class="hero-content flex">
+          <div class="left">
+            <div class="content">
+              <div class="description" id="hero-description">
+                <div class="hide-text-cont"><span class="hide-text">Live on</span></div>
+                <div class="hide-text-cont"><span class="highlight hide-text">fruits & vegetables</span></div>
+                <div class="hide-text-cont"><span class="hide-text">to live Healthy</span></div>
+                <div class="message fadeInUp" onmouseover="this.innerHTML='💯 Healthy &amp; Fresh'" onmouseout="this.innerHTML='100% Healthy &amp; Fresh'">100% Healthy & Fresh</div>
+              </div>
+              <div class="cta-button pointer fadeInUp">
+                <div class="button-content flex">Shop Now
+                  <div class="hidden-icon"><i data-feather="shopping-cart"></i></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="right">
+            <div class="content">
+              <div class="bg-blob-cont">
+                <div class="bg-blob"></div>
+              </div>
+              <div class="hero-image"><img src="https://i.imgur.com/JNpOfzu.png"/></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="floating-info">
+      <div class="floating-content flex">
+        <div class="floating-item flex">
+          <div class="left"><img src="https://i.imgur.com/cX7xlIO.png"/></div>
+          <div class="right flex">
+            <div class="title">Grocery</div>
+            <div class="desc">Fresh grocery delivered</div>
+          </div>
+        </div>
+        <div class="floating-item flex">
+          <div class="left"><img src="https://i.imgur.com/H79JDt6.png"/></div>
+          <div class="right flex">
+            <div class="title">Salads</div>
+            <div class="desc">Order nutritious salads</div>
+          </div>
+        </div>
+        <div class="floating-item flex">
+          <div class="left"><img src="https://i.imgur.com/YjuULqr.png"/></div>
+          <div class="right flex">
+            <div class="title">Cart Value</div>
+            <div class="desc">Cart value review your cart</div>
+          </div>
+        </div>
+        <div class="floating-item flex">
+          <div class="left"><img src="https://i.imgur.com/lOha9yQ.png"/></div>
+          <div class="right flex">
+            <div class="title">Guarantee</div>
+            <div class="desc">Guaranteed delivery</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="large-food-cards">
+      <div class="food-cards-cont flex">
+        <div class="food-card-item" style="background-image:url(https://i.imgur.com/IEGLl3s.png)">
+          <div class="content">
+            <div class="sub-title">Organically Produce</div>
+            <div class="title">Vegetables</div>
+            <div class="cta-button pointer">Shop Now</div>
+          </div>
+        </div>
+        <div class="food-card-item" style="background-image:url(https://i.imgur.com/5d8dZTR.png)">
+          <div class="content">
+            <div class="sub-title">Flat 30% off</div>
+            <div class="title">Fresh Food</div>
+            <div class="cta-button pointer">Shop Now</div>
+          </div>
+        </div>
+        <div class="food-card-item" style="background-image:url(https://i.imgur.com/imQSOln.png)">
+          <div class="content">
+            <div class="sub-title">Gluten-free</div>
+            <div class="title">Super Salads</div>
+            <div class="cta-button pointer">Shop Now</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="add-ons">
+      <div class="big-title">New Organic Add-ons</div>
+      <div class="tab-switcher flex">
+        <div class="tabs-cont flex">
+          <div class="tab-item flex selected">Breakfast</div>
+          <div class="tab-item flex">Fruits</div>
+          <div class="tab-item flex">Salads</div>
+        </div>
+      </div>
+      <div class="add-on-cards">
+        <div class="add-on-cards-cont flex">
+          <div class="add-on-card-item">
+            <div class="content flex"><img src="https://i.imgur.com/O2ir3aS.png"/>
+              <div class="sub-content">
+                <div class="category">Breakfast</div>
+                <div class="name">Chips</div>
+                <div class="price-section flex">
+                  <div class="price">$ 10</div>
+                  <div class="rating"><i class="pointer" data-feather="star"></i><i class="pointer" data-feather="star"></i><i class="pointer" data-feather="star"></i><i class="pointer" data-feather="star"></i><i class="pointer" data-feather="star"></i>
+                  </div>
+                </div>
+                <div class="button-group flex">
+                  <div class="left">
+                    <div class="button-content button-contentt pointer flex">ADD TO CART<i data-feather="arrow-right"></i></div>
+                  </div>
+                  <div class="right flex">
+                    <div class="button-content pointer flex"><i data-feather="heart"></i></div>
+                    <div class="button-content pointer flex"><i data-feather="eye"></i></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="add-on-card-item">
+            <div class="content flex"><img src="https://i.imgur.com/mjpi2dI.png"/>
+              <div class="sub-content">
+                <div class="category">Breakfast</div>
+                <div class="name">Side Dish</div>
+                <div class="price-section flex">
+                  <div class="price-cont flex">
+                    <div class="price">$ 8</div>
+                  </div>
+                  <div class="rating"><i class="pointer" data-feather="star"></i><i class="pointer" data-feather="star"></i><i class="pointer" data-feather="star"></i><i class="pointer" data-feather="star"></i><i class="pointer" data-feather="star"></i>
+                  </div>
+                </div>
+                <div class="button-group flex">
+                  <div class="left">
+                    <div class="button-content button-contentt pointer flex">ADD TO CART<i data-feather="arrow-right"></i></div>
+                  </div>
+                  <div class="right flex">
+                    <div class="button-content pointer flex"><i data-feather="heart"></i></div>
+                    <div class="button-content pointer flex"><i data-feather="eye"></i></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="add-on-card-item">
+            <div class="content flex"><img src="https://i.imgur.com/C8uT3x7.png"/>
+              <div class="sub-content">
+                <div class="category">Breakfast</div>
+                <div class="name">BoltHouse</div>
+                <div class="price-section flex">
+                  <div class="price">$ 100</div>
+                  <div class="rating"><i class="pointer" data-feather="star"></i><i class="pointer" data-feather="star"></i><i class="pointer" data-feather="star"></i><i class="pointer" data-feather="star"></i><i class="pointer" data-feather="star"></i>
+                  </div>
+                </div>
+                <div class="button-group flex">
+                  <div class="left">
+                    <div class="button-content button-contentt pointer flex">ADD TO CART<i data-feather="arrow-right"></i></div>
+                  </div>
+                  <div class="right flex">
+                    <div class="button-content pointer flex"><i data-feather="heart"></i></div>
+                    <div class="button-content pointer flex"><i data-feather="eye"></i></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="add-on-card-item">
+            <div class="content flex"><img src="https://i.imgur.com/mjpi2dI.png"/>
+              <div class="sub-content">
+                <div class="category">Breakfast</div>
+                <div class="name">Side Dish</div>
+                <div class="price-section flex">
+                  <div class="price-cont flex">
+                    <div class="price strike-out">$ 10</div>
+                    <div class="price">$ 8</div>
+                  </div>
+                  <div class="rating"><i class="pointer" data-feather="star"></i><i class="pointer" data-feather="star"></i><i class="pointer" data-feather="star"></i><i class="pointer" data-feather="star"></i><i class="pointer" data-feather="star"></i>
+                  </div>
+                </div>
+                <div class="button-group flex">
+                  <div class="left">
+                    <div class="button-content button-contentt pointer flex">ADD TO CART<i data-feather="arrow-right"></i></div>
+                  </div>
+                  <div class="right flex">
+                    <div class="button-content pointer flex"><i data-feather="heart"></i></div>
+                    <div class="button-content pointer flex"><i data-feather="eye"></i></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="add-on-card-item">
+            <div class="content flex"><img src="https://i.imgur.com/C8uT3x7.png"/>
+              <div class="sub-content">
+                <div class="category">Breakfast</div>
+                <div class="name">BoltHouse</div>
+                <div class="price-section flex">
+                  <div class="price">$ 100</div>
+                  <div class="rating"><i class="pointer" data-feather="star"></i><i class="pointer" data-feather="star"></i><i class="pointer" data-feather="star"></i><i class="pointer" data-feather="star"></i><i class="pointer" data-feather="star"></i>
+                  </div>
+                </div>
+                <div class="button-group flex">
+                  <div class="left">
+                    <div class="button-content button-contentt pointer flex">ADD TO CART<i data-feather="arrow-right"></i></div>
+                  </div>
+                  <div class="right flex">
+                    <div class="button-content pointer flex"><i data-feather="heart"></i></div>
+                    <div class="button-content pointer flex"><i data-feather="eye"></i></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="add-on-card-item">
+            <div class="content flex"><img src="https://i.imgur.com/O2ir3aS.png"/>
+              <div class="sub-content">
+                <div class="category">Breakfast</div>
+                <div class="name">Chips</div>
+                <div class="price-section flex">
+                  <div class="price">$ 10</div>
+                  <div class="rating"><i class="pointer" data-feather="star"></i><i class="pointer" data-feather="star"></i><i class="pointer" data-feather="star"></i><i class="pointer" data-feather="star"></i><i class="pointer" data-feather="star"></i>
+                  </div>
+                </div>
+                <div class="button-group flex">
+                  <div class="left">
+                    <div class="button-content button-contentt pointer flex">ADD TO CART<i data-feather="arrow-right"></i></div>
+                  </div>
+                  <div class="right flex">
+                    <div class="button-content pointer flex"><i data-feather="heart"></i></div>
+                    <div class="button-content pointer flex"><i data-feather="eye"></i></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="add-on-card-item">
+            <div class="content flex"><img src="https://i.imgur.com/TGCjy8Z.png"/>
+              <div class="sub-content">
+                <div class="category">Breakfast</div>
+                <div class="name">Bread</div>
+                <div class="price-section flex">
+                  <div class="price">$ 7.5</div>
+                  <div class="rating"><i class="pointer" data-feather="star"></i><i class="pointer" data-feather="star"></i><i class="pointer" data-feather="star"></i><i class="pointer" data-feather="star"></i><i class="pointer" data-feather="star"></i>
+                  </div>
+                </div>
+                <div class="button-group flex">
+                  <div class="left">
+                    <div class="button-content button-contentt pointer flex">ADD TO CART<i data-feather="arrow-right"></i></div>
+                  </div>
+                  <div class="right flex">
+                    <div class="button-content pointer flex"><i data-feather="heart"></i></div>
+                    <div class="button-content pointer flex"><i data-feather="eye"></i></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="add-on-card-item">
+            <div class="content flex"><img src="https://i.imgur.com/TGCjy8Z.png"/>
+              <div class="sub-content">
+                <div class="category">Breakfast</div>
+                <div class="name">Bread</div>
+                <div class="price-section flex">
+                  <div class="price">$ 7.5</div>
+                  <div class="rating"><i class="pointer" data-feather="star"></i><i class="pointer" data-feather="star"></i><i class="pointer" data-feather="star"></i><i class="pointer" data-feather="star"></i><i class="pointer" data-feather="star"></i>
+                  </div>
+                </div>
+                <div class="button-group flex">
+                  <div class="left">
+                    <div class="button-content button-contentt pointer flex">ADD TO CART<i data-feather="arrow-right"></i></div>
+                  </div>
+                  <div class="right flex">
+                    <div class="button-content pointer flex"><i data-feather="heart"></i></div>
+                    <div class="button-content pointer flex"><i data-feather="eye"></i></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="footer">
+      <div class="footer-cont flex">
+        <div class="content flex">
+          <div class="about">
+            <div class="title">Farmiest!</div>
+            <div class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc in enim volutpat tristique urna. Diam, id vitae adipiscing purus magna dapibus ipsum urna sed.</div>
+            <div class="socials flex">
+              <div class="social flex pointer"><img src="https://i.imgur.com/Mh9mdTU.png"/></div>
+              <div class="social flex pointer twit"><img src="https://i.imgur.com/gbWF6Cm.png"/></div>
+              <div class="social flex pointer"><img src="https://i.imgur.com/BlUCYAI.png"/></div>
+              <div class="social flex pointer"><img src="https://i.imgur.com/yW2YWgr.png"/></div>
+            </div>
+          </div>
+          <div class="links">
+            <div class="title">Links</div>
+            <div class="link flex pointer"><i data-feather="chevron-right"></i>My Account</div>
+            <div class="link flex pointer"><i data-feather="chevron-right"></i>Checkout</div>
+            <div class="link flex pointer"><i data-feather="chevron-right"></i>Wishlist</div>
+            <div class="link flex pointer"><i data-feather="chevron-right"></i>Shopping Cart</div>
+          </div>
+          <div class="links">
+            <div class="title">Information</div>
+            <div class="link flex pointer"><i data-feather="chevron-right"></i>About Us</div>
+            <div class="link flex pointer"><i data-feather="chevron-right"></i>Our Team</div>
+            <div class="link flex pointer"><i data-feather="chevron-right"></i>Contact Us</div>
+            <div class="link flex pointer"><i data-feather="chevron-right"></i>Blog</div>
+          </div>
+          <div class="contact">
+            <div class="title">Contact</div>
+            <div class="link flex">
+              <div class="icon"><i data-feather="map-pin"></i></div>1234 North Avenue, South West, IN 360001
+            </div>
+            <div class="link flex"><i data-feather="mail"></i><a href="mailto:jondoe@farmiest.com">jondoe@farmiest.com</a></div>
+            <div class="link flex"><i data-feather="phone"></i>+0123456789</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>feather.replace();</script>
+  </main>
+  <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+  <script src="main.js"></script>
+<script>
+
+
+
+    let isLoaded = false;
+window.onload = () => {
+    isLoaded = true;
+    window.document.body.style.visibility = "unset";
+    let tl = gsap.timeline();
+    tl.set(".hide-text", { autoAlpha: 1 });
+    tl.fromTo(
+        "main",
+        { opacity: 0 },
+        { opacity: 1, duration: 0.4, ease: Power4.easeInOut }
+    );
+    tl.from(".header-content", {
+        y: "-200%",
+        duration: 0.5,
+        ease: Power4.easeInOut
+    });
+    tl.from(".hide-text", {
+        stagger: 0.05,
+        duration: 0.5,
+        y: "100%",
+        ease: Power4.easeInOut
+    });
+    tl.fromTo(
+        ".floating-content",
+        { opacity: 0, y: "50%" },
+        { opacity: 1, y: "5%" }
+    );
+    tl.fromTo(
+        ".hero .fadeInUp",
+        { stagger: 0.15, opacity: 0, y: "100%" },
+        {
+            stagger: 0.15,
+            duration: 0.5,
+            y: "0%",
+            opacity: 1,
+            ease: Power4.easeInOut
+        },
+        "-=50%"
+    );
+    tl.fromTo(
+        ".side-text",
+        { opacity: 0, y: "100%" },
+        {
+            duration: 3.5,
+            y: "0%",
+            opacity: 1,
+            ease: Power4.easeInOut
+        },
+        "-=50%"
+    );
+    tl.fromTo(
+        ".hero-image",
+        { opacity: 0, y: "100%" },
+        {
+            opacity: 1,
+            y: "0%",
+            ease: Power4.easeInOut,
+            duration: 2
+        },
+        "-=150%"
+    );
+    tl.fromTo(
+        ".bg-blob",
+        {
+            scale: 0,
+            rotate: 0
+        },
+        {
+            duration: 3,
+            scale: 1,
+            rotate: 360,
+            ease: Power4.easeInOut
+        },
+        "-=60%"
+    );
+    gsap.to(".bg-blob", {
+        duration: 5,
+        rotate: 360,
+        repeat: -1,
+        ease: Linear.easeNone
+    });
+    gsap.fromTo(
+        ".food-card-item",
+        { opacity: 0, y: "100%" },
+        {
+            scrollTrigger: ".food-card-item",
+            stagger: 0.2,
+            y: "0%",
+            opacity: 1,
+            ease: Power4.easeInOut
+        }
+    );
+    gsap.fromTo(
+        ".add-ons .big-title",
+        { opacity: 0, y: "100%" },
+        {
+            scrollTrigger: ".add-ons .big-title",
+            y: "0%",
+            opacity: 1,
+            ease: Power4.easeInOut
+        }
+    );
+    gsap.fromTo(
+        ".tab-switcher",
+        { opacity: 0, y: "100%" },
+        {
+            scrollTrigger: ".tab-switcher",
+            y: "0%",
+            opacity: 1,
+            ease: Power4.easeInOut
+        }
+    );
+    gsap.fromTo(
+        ".add-on-card-item",
+        { opacity: 0, y: "100%" },
+        {
+            stagger: 0.15,
+            delay: 0.6,
+            scrollTrigger: { trigger: ".add-on-cards-cont" },
+            y: "0%",
+            opacity: 1,
+            ease: Power4.easeInOut
+        }
+    );
+    gsap.fromTo(
+        ".organic-products .big-title",
+        { opacity: 0, y: "100%" },
+        {
+            scrollTrigger: ".organic-products .big-title",
+            y: "0%",
+            opacity: 1,
+            ease: Power4.easeInOut
+        }
+    );
+    gsap.fromTo(
+        ".organic-cards-cont .left .overlay",
+        {
+            width: "396px"
+        },
+        {
+            width: "0px",
+            scrollTrigger: ".organic-cards-cont .left .overlay",
+            delay: 0.4,
+            duration: 1.5,
+            ease: Power4.easeInOut
+        }
+    );
+
+    gsap.fromTo(
+        ".mini-product-card-item",
+        { opacity: 0, x: "100%" },
+        {
+            stagger: 0.1,
+            x: "0%",
+            scrollTrigger: {
+                trigger: ".mini-product-card-item"
+            },
+            duration: 1,
+            opacity: 1,
+            ease: Power4.easeInOut
+        }
+    );
+    gsap.fromTo(
+        ".test-cont .big-title",
+        { opacity: 0, y: "100%" },
+        {
+            scrollTrigger: ".test-cont .big-title",
+            y: "0%",
+            opacity: 1,
+            ease: Power4.easeInOut
+        }
+    );
+    gsap.fromTo(
+        ".test-card-item",
+        { opacity: 0, y: "100%" },
+        {
+            stagger: 0.15,
+            scrollTrigger: ".test-card-item",
+            y: "0%",
+            opacity: 1,
+            ease: Power4.easeInOut
+        }
+    );
+    gsap.fromTo(
+        ".blog .big-title",
+        { opacity: 0, y: "100%" },
+        {
+            scrollTrigger: ".blog .big-title",
+            y: "0%",
+            opacity: 1,
+            ease: Power4.easeInOut
+        }
+    );
+    gsap.fromTo(
+        ".test-card-item",
+        { opacity: 0, y: "100%" },
+        {
+            stagger: 0.15,
+            scrollTrigger: ".test-card-item",
+            y: "0%",
+            opacity: 1,
+            ease: Power4.easeInOut
+        }
+    );
+    let scrlTl = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".blog-cards-cont",
+            toggleActions: "play none reverse none"
+        }
+    });
+    scrlTl.fromTo(
+        ".blog-card",
+        { opacity: 0, y: "100%" },
+        {
+            stagger: 0.15,
+            y: "0%",
+            opacity: 1,
+            duration: 1.4,
+            ease: Power4.easeInOut
+        }
+    );
+    scrlTl.fromTo(
+        ".blog-card .overlay",
+        { height: "250px" },
+        {
+            stagger: 0.16,
+            height: "0px",
+            duration: 1.2,
+            ease: Power4.easeInOut
+        },
+        "-=80%"
+    );
+};
+
+
+
+</script>
+</body>
+</html>
